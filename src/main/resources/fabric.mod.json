@@ -3,10 +3,10 @@
   "id": "godotsignalsystem",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Godot Signal System Lib",
   "description": "This mod aims to help new BTA modders.",
   "authors": [
-    "Turnip Labs"
+    "Deus"
   ],
   "contact": {
     "homepage": "",

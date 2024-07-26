@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "godotsignalsystem",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Godot Signal System Lib",
   "description": "This mod aims to help new BTA modders.",
   "authors": [
-    "Turnip Labs"
+    "Deus"
   ],
   "contact": {
     "homepage": "",
@@ -19,25 +19,25 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-			"turniplabs.examplemod.ExampleMod"
+			"deus.godotsignalsystem.GodotSignalSystem"
     ],
 		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"deus.godotsignalsystem.GodotSignalSystem"
 		],
 		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"deus.godotsignalsystem.GodotSignalSystem"
 		],
 		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
+			"deus.godotsignalsystem.GodotSignalSystem"
 		]
 	},
   "mixins": [
-      "examplemod.mixins.json"
+		"godotsignalsystem.mixins.json"
   ],
 
   "depends": {
-		"minecraft": "^7.2-beta",
-    "fabricloader": ">=0.15.5"
+		"minecraft": "~7.2-beta.2",
+		"fabricloader": ">=0.15.5"
   },
   "suggests": {
   }

@@ -1,38 +1,34 @@
-# Example Mod
+# Godot Signal System Lib
 
-Template for making Babric mods for BTA!
+### What's This Mod?
+This mod provides an implementation of a signal system, inspired by event-driven programming paradigms. It allows different parts of your mod or application to communicate in a decoupled manner.
 
-**Note: *DO NOT fork this repository unless you want to contribute!***
+### Features:
+* Signal Handling: Manage and emit events using signals.
+* Flexible Communication: Connect multiple listeners to respond to events.
+* Decoupled Architecture: Improve modularity and reduce direct dependencies between components. 
 
-## Prerequisites
-- JDK for Java 17 ([Eclipse Temurin](https://adoptium.net/temurin/releases/) recommended)
-- [Intellij IDEA](https://www.jetbrains.com/idea/download/) (Scroll down for the free community edition, if using linux **DO NOT** use the flatpak distribution)
-- Minecraft Development plugin (Optional, but highly recommended)
+### Example Usage:
+```java
+import core.signal.Signal;
 
-## Setup instructions
-   
+public class ExampleUsage {
+private static final Signal<String> MESSAGE_SIGNAL = new Signal<>();
 
-1. Click the `Use this template` button on this repo's page above (Will only appear if logged in). Choose `Create a new repository`, you will be redirected to a new page. Enter your repo's name and description, and hit `Create repository`.  
-   To get your project, open IntelliJ IDEA and click `Get from VCS`. Select `Repository URL` and enter your repo's url
+    public static void main(String[] args) {
+        // Connect a listener to handle String messages
+        MESSAGE_SIGNAL.connect(message -> {
+            System.out.println("Received message: " + message);
+        });
 
-2. After the project has finished importing, close it and open it again.  
-   If that does not work, open the right sidebar with `Gradle` on it, open `Tasks` > `fabric` and run `ideaSyncTask`.
+        // Emit a message
+        String message = "Hello, World!";
+        MESSAGE_SIGNAL.emit(message);
+    }
+}
+```
+This mod is useful for enhancing communication and event handling within your mod.
 
-3. Create a new run configuration by going in `Run > Edit Configurations`.  
-   Then click on the plus icon and select Gradle. In the `Tasks and Arguments` field enter `build`.  
-   Running it will build your finished jar files and put them in `build/libs/`.
-
-4. Lastly, open `File` > `Settings` and head to `Build, Execution, Development` > `Build Tools` > `Gradle`.  
-   Make sure `Build and run using` and `Run tests using` is set to `Gradle`.
-
-5. Done! Now, all that's left is to change every mention of `examplemod` and `turniplabs` to your own mod id and mod group, respectively. Happy modding!
-
-## Tips
-
-1. If you haven't already you should join the BTA modding discord! https://discord.gg/FTUNJhswBT
-2. You can set your username when launching the client run configuration by setting `--username <username>` in your program arguments.
-3. Set `online-mode` to `false` inside of `run/server.properties` in order to be able to join your server!
-4. When launching the server run configuration you may want to remove the `nogui` program argument in order to see the regular server GUI.
-5. In Intellij you can double press shift or press ctrl+N to search class files, change the search from the default `Project Files` to `All Places` you can easily explore the classes for you dependencies and even BTA itself.
-6. In Intellij if ctrl+left click on a field or method you can quickly get information on when and where that field or method is assign or used.
+### Mod examples
+I don't know; I don't have any real examples, but could you give me one?
 

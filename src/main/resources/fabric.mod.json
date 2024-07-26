@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "godotsignalsystem",
   "version": "${version}",
 
   "name": "Example Mod",
@@ -19,20 +19,20 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-			"turniplabs.examplemod.ExampleMod"
+			"deus.godotsignalsystem.GodotSignalSystem"
     ],
 		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"deus.godotsignalsystem.GodotSignalSystem"
 		],
 		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"deus.godotsignalsystem.GodotSignalSystem"
 		],
 		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
+			"deus.godotsignalsystem.GodotSignalSystem"
 		]
 	},
   "mixins": [
-      "examplemod.mixins.json"
+		"godotsignalsystem.mixins.json"
   ],
 
   "depends": {
